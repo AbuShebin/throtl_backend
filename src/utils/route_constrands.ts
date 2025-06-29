@@ -3,5 +3,6 @@ export const routeConstrands = {
     addVehicleRoute: "/addBike",
     getAllVehicleRoute: "/getAllBikes",
     rideRoute:"/rideRoute",
-    addRideDetails:"/addRideDetails"
+    addRideDetails:"/addRideDetails",
+    getAllRideDetails:"/getAllrideDetails"
 }

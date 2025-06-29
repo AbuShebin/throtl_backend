@@ -7,5 +7,8 @@ export const rideService = {
     addRideDetails: (rideDetails:AddRideDetailsType)=>{
         const newRide = new RideDetailsModel(rideDetails);
          newRide.save();
+    },
+    getAllRideDetails:()=>{
+        return RideDetails.find();
     }
 }
