@@ -1,0 +1,8 @@
+import express from "express";
+const router = express.Router();
+import { routeConstrands } from "../../utils/route_constrands";
+import {rideController} from "./rideController";
+
+router.post(routeConstrands.addRideDetails,rideController.addRideDetails);
+
+export default router;

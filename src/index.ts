@@ -3,6 +3,7 @@ import mongoose from 'mongoose';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import bikeRoutes from './modules/vehicle/vehicleRoute';
+import rideRoutes from './modules/ride/rideRoutes';
 import { routeConstrands } from './utils/route_constrands';
 
 dotenv.config();
@@ -16,6 +17,7 @@ app.get('/', (req, res) => {
 });
 
 app.use(routeConstrands.vehicleRoute, bikeRoutes);
+app.use(routeConstrands.rideRoute,rideRoutes );
 
 mongoose.connect(process.env.MONGO_URI as string)
   .then(() => {
