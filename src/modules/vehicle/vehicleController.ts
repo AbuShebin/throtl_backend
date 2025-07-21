@@ -3,6 +3,7 @@ import { bikeService } from '../vehicle/vehicleService';
 
 export const vehicleController = {
   addBike: async (req: Request, res: Response) => {
+    console.log("add bike triggered");
     try {
       const { bikeName, model, year } = req.body;
       const savedBike = await bikeService.addBike({ bikeName, model, year });
@@ -13,6 +14,7 @@ export const vehicleController = {
   },
 
   getAllBikes: async (_req: Request, res: Response) => {
+    console.log("get all bike triggred");
     try {
       const bikes = await bikeService.getAllBikes();
       res.status(200).json({ bikes });

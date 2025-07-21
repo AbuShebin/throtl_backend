@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { routeConstrands } from "../../utils/route_constrands";
+import routeConstrands  from "../../utils/route_constrands";
 import { vehicleController } from "./vehicleController";
 
 const router= Router();

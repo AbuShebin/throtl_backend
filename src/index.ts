@@ -4,7 +4,8 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import bikeRoutes from './modules/vehicle/vehicleRoute';
 import rideRoutes from './modules/ride/rideRoutes';
-import { routeConstrands } from './utils/route_constrands';
+import  routeConstands  from './utils/route_constrands';
+import serviceRoutes from "./modules/sevice/service_route";
 
 dotenv.config();
 
@@ -16,8 +17,9 @@ app.get('/', (req, res) => {
   res.send('Throtl API up and running 🏍️🔥');
 });
 
-app.use(routeConstrands.vehicleRoute, bikeRoutes);
-app.use(routeConstrands.rideRoute,rideRoutes );
+app.use(routeConstands.vehicleRoute, bikeRoutes);
+app.use(routeConstands.rideRoute,rideRoutes );
+// app.use(routeConstands.serviceRoute,)
 
 mongoose.connect(process.env.MONGO_URI as string)
   .then(() => {
